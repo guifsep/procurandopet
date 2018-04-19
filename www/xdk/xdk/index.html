@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="media_button_bar/css/media_button_bar.css">
+    <link rel="stylesheet" type="text/css" href="galleria/galleria.classic.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+    <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <script src="intelxdk.js"></script>
+    <script src="cordova.js"></script>
+    <script src="xhr.js"></script>
+    <script src="xdk/init-dev.js"></script>
+    <script type="application/javascript" src="lib/jquery.min.js"></script>
+    <script type="application/javascript" src="js/index_user_scripts.js"></script>
+    <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
+    <script type="application/javascript" src="galleria/galleria-1.3.6.min.js"></script>
+    <script type="application/javascript" src="galleria/galleria.classic.min.js"></script>
+    <script type="application/javascript" src="galleria/galleria-startup.js"></script>
+    <script type="application/javascript" src="camera/cordova-cam.js"></script>
+    <script type="application/javascript" src="xdk/appdesigner/js/rest-of-space.js"></script>
+    <script type="application/javascript" src="xdk/ad/bs_subpage.js"></script>
+    <script type="application/javascript" src="sidebar/js/hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+  </head>
+
+  <body>
+    <div class="upage" id="mainpage">
+
+      <div class="upage-outer">
+        <div class="uib-header header-bg container-group inner-element uib_w_1" data-uib="layout/header" data-ver="0" id="headertitle">
+          <h2>Procurando Pets</h2>
+          <button class="btn widget uib_w_17 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="voltar"><i class="glyphicon glyphicon-chevron-left button-icon-left" data-position="left"></i>
+          </button>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"></div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_96_87">
+          <div class="widget uib_w_3 scale-image d-margins" data-uib="media/img" data-ver="0">
+            <figure class="figure-align">
+              <img src="images/home.jpg" alt="cachorro perdido" id="imghome">
+              <figcaption data-position="bottom"></figcaption>
+            </figure>
+          </div>
+          <button class="btn widget uib_w_6 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnCadastro"><i class="glyphicon glyphicon-plus button-icon-left" data-position="left"></i>Cadastrar Pet Perdido</button>
+          <button class="btn widget uib_w_7 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnProcurar"><i class="glyphicon glyphicon-search button-icon-left" data-position="left"></i>Procurar Pet Perdido</button>
+          <button class="btn widget uib_w_8 d-margins btnComoFunciona btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnComoFunciona"><i class="glyphicon glyphicon-question-sign button-icon-left" data-position="left"></i>Como Funciona?</button>
+          <button class="btn widget uib_w_54 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnContato"><i class="glyphicon glyphicon-bullhorn button-icon-left" data-position="left"></i>Contate-nos</button>
+        </div>
+
+        <div class="inner-element uib_w_65 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'squeeze', 'v':200, 'side':'left', 'dur':200}" id="navbar">
+          <div class="sidebar-content content-area vertical-col">
+
+            <button class="btn widget uib_w_66 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnHome">Home<i class="glyphicon glyphicon-home button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_67 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnCadastrar">Cadastrar Pet<i class="glyphicon glyphicon-plus button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_68 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnProcurar">Procurar Pet<i class="glyphicon glyphicon-search button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_69 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnComoFunciona">Como Funciona?<i class="glyphicon glyphicon-question-sign button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_70 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnContatenos">Contate-nos<i class="glyphicon glyphicon-bullhorn button-icon-right" data-position="right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="upage hidden" id="ComoFunciona">
+      <div class="upage-outer">
+        <div class="inner-element uib_w_65 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'squeeze', 'v':200, 'side':'left', 'dur':200}" id="navbar">
+          <div class="sidebar-content content-area vertical-col">
+
+            <button class="btn widget uib_w_66 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnHome">Home<i class="glyphicon glyphicon-home button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_67 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnCadastrar">Cadastrar Pet<i class="glyphicon glyphicon-plus button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_68 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnProcurar">Procurar Pet<i class="glyphicon glyphicon-search button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_69 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnComoFunciona">Como Funciona?<i class="glyphicon glyphicon-question-sign button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_70 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnContatenos">Contate-nos<i class="glyphicon glyphicon-bullhorn button-icon-right" data-position="right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="uib-header header-bg container-group inner-element uib_w_14" data-uib="layout/header" data-ver="0" id="headertitle">
+          <h2>Procurando Pet</h2>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left">
+            <button class="btn widget uib_w_17 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="voltar"><i class="glyphicon glyphicon-chevron-left button-icon-left" data-position="left"></i>
+            </button>
+          </div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_59_24">
+          <div class="tarea widget uib_w_15 d-margins textoComoFunciona" data-uib="media/text" data-ver="0" name="uib_w_15">
+            <div class="widget-container left-receptacle"></div>
+            <div class="widget-container right-receptacle"></div>
+            <div class="text-container">
+              <p>O <strong>Procurando Pet&nbsp;</strong>auxilia na busca do seu pet perdido. Basta preencher um pequeno formulário com informações sobre seu pet e inserir algumas fotos dele.</p>
+
+              <p>Os usuários não precisam estar conectados em nenhuma rede social, ele apenas abre o aplicativo e identifica os pets perdidos. O usuário será auxiliado a entrar em contato com o solicitante.</p>
+
+              <p>Estamos a disposição para dúvidas, reclamações e sugestões através do nosso e-mail: procurandopet@procurandopet.com.br</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="upage hidden" id="ProcurarPet">
+      <div class="upage-outer">
+        <div class="inner-element uib_w_65 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'squeeze', 'v':200, 'side':'left', 'dur':200}" id="navbar">
+          <div class="sidebar-content content-area vertical-col">
+
+            <button class="btn widget uib_w_66 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnHome">Home<i class="glyphicon glyphicon-home button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_67 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnCadastrar">Cadastrar Pet<i class="glyphicon glyphicon-plus button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_68 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnProcurar">Procurar Pet<i class="glyphicon glyphicon-search button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_69 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnComoFunciona">Como Funciona?<i class="glyphicon glyphicon-question-sign button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_70 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnContatenos">Contate-nos<i class="glyphicon glyphicon-bullhorn button-icon-right" data-position="right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="uib-header header-bg container-group inner-element uib_w_9" data-uib="layout/header" data-ver="0" id="headertitle">
+          <h2>Procurando Pet</h2>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left">
+            <button class="btn widget uib_w_18 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="voltar"><i class="glyphicon glyphicon-chevron-left button-icon-left" data-position="left"></i>
+            </button>
+          </div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_60_97">
+          <div class="table-thing widget uib_w_12 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+            <label class="narrow-control" for="campoPesquisa"></label>
+            <input class="wide-control form-control default" type="search" placeholder="Pesquise por pets..." id="campoPesquisa">
+          </div>
+          <div class="widget uib_w_10 tamImgs marginImgs" data-uib="media/img" data-ver="0">
+            <figure class="figure-align">
+              <img src="images/layla.jpg">
+              <figcaption data-position="bottom"></figcaption>
+            </figure>
+          </div>
+          <div class="tarea widget uib_w_11 d-margins marginText textoProcurar" data-uib="media/text" data-ver="0" name="uib_w_11">
+            <div class="widget-container left-receptacle"></div>
+            <div class="widget-container right-receptacle"></div>
+            <div class="text-container">
+              <p><small><strong>Atende por</strong>: Layla</small>
+              </p>
+
+              <p><small><strong>Perdido em</strong>: 10/08/2017</small>
+              </p>
+
+              <p><small><strong>Visto pela última vez em</strong>: </small>
+              </p>
+
+              <p><small>São Roque-SP no Bairro Jd. Villaça</small>
+              </p>
+            </div>
+          </div>
+          <div class="tarea widget uib_w_13 d-margins textoProcurar" data-uib="media/text" data-ver="0" name="uib_w_13">
+            <div class="widget-container left-receptacle"></div>
+            <div class="widget-container right-receptacle"></div>
+            <div class="text-container">
+              <p><small><strong>Raça</strong>: Labrador</small>
+              </p>
+
+              <p><small><strong>Cor</strong>: Preto</small>
+              </p>
+
+              <p><small><strong>Nome p/ contato</strong>: Hamilton</small>
+              </p>
+
+              <p><small><strong>Telefone p/ contato</strong>: (11) 967767696</small>
+              </p>
+            </div>
+          </div>
+          <div class="btn-group uib-bs-flex widget uib_w_37 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+            <button class="btn widget uib_w_38 btn-lg btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="curti"><i class="glyphicon glyphicon-heart button-icon-top" data-position="top"></i>
+            </button>
+            <button class="btn widget uib_w_39 btn-lg btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnEncontrei">Eu encontrei!</button>
+          </div>
+          <div class="widget uib_w_19 scale-image d-margins tamImgs marginImgs" data-uib="media/img" data-ver="0">
+            <figure class="figure-align">
+              <img src="images/rodolfo.jpeg">
+              <figcaption data-position="bottom"></figcaption>
+            </figure>
+          </div>
+          <div class="tarea widget uib_w_20 d-margins textoProcurar marginText" data-uib="media/text" data-ver="0" name="uib_w_20">
+            <div class="widget-container left-receptacle"></div>
+            <div class="widget-container right-receptacle"></div>
+            <div class="text-container">
+              <p><small><strong>Atende por</strong>: Rodolfo</small>
+              </p>
+
+              <p><small><strong>Perdido em</strong>: 12/04/2018</small>
+              </p>
+
+              <p><small><strong>Visto pela última vez em</strong>:&nbsp;</small>
+              </p>
+
+              <p><small>Ibiúna-SP no Bairro Votorantim</small>
+              </p>
+            </div>
+          </div>
+          <div class="tarea widget uib_w_21 d-margins textoProcurar" data-uib="media/text" data-ver="0" name="uib_w_21">
+            <div class="widget-container left-receptacle"></div>
+            <div class="widget-container right-receptacle"></div>
+            <div class="text-container">
+              <p><small><strong>Raça</strong>:&nbsp;</small>
+              </p>
+
+              <p><small><strong>Cor</strong>: Preto e Branco</small>
+              </p>
+
+              <p><small><strong>Nome p/ contato</strong>: Dona Cida</small>
+              </p>
+
+              <p><small><strong>Telefone p/ contato</strong>: (11) 946957495</small>
+              </p>
+            </div>
+          </div>
+          <div class="btn-group uib-bs-flex widget uib_w_40 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+            <button class="btn widget uib_w_41 btn-lg btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="curti"><i class="glyphicon glyphicon-heart button-icon-top" data-position="top"></i>
+            </button>
+            <button class="btn widget uib_w_43 btn-lg btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnEncontrei">Eu encontrei!</button>
+          </div>
+          <div class="widget uib_w_10 tamImgs marginImgs" data-uib="media/img" data-ver="0">
+            <figure class="figure-align">
+              <img src="images/meg.jpg">
+
+              <figcaption data-position="bottom"></figcaption>
+            </figure>
+          </div>
+          <div class="tarea widget uib_w_11 d-margins marginText textoProcurar" data-uib="media/text" data-ver="0" name="uib_w_11">
+            <div class="widget-container left-receptacle"></div>
+            <div class="widget-container right-receptacle"></div>
+            <div class="text-container">
+              <p><small><strong>Atende por</strong>: Meg</small>
+              </p>
+
+              <p><small><strong>Perdido em</strong>: 12/05/2017</small>
+              </p>
+
+              <p><small><strong>Visto pela última vez em</strong>: </small>
+              </p>
+
+              <p><small>São Roque-SP no Bairro Gabriel Piza</small>
+              </p>
+            </div>
+          </div>
+          <div class="tarea widget uib_w_13 d-margins textoProcurar" data-uib="media/text" data-ver="0" name="uib_w_13">
+            <div class="widget-container left-receptacle"></div>
+            <div class="widget-container right-receptacle"></div>
+            <div class="text-container">
+              <p><small><strong>Raça</strong>: YorkShire</small>
+              </p>
+
+              <p><small><strong>Cor</strong>: Branco e Bege</small>
+              </p>
+
+              <p><small><strong>Nome p/ contato</strong>: Elaine</small>
+              </p>
+
+              <p><small><strong>Telefone p/ contato</strong>: (11) 961846444</small>
+              </p>
+            </div>
+          </div>
+          <div class="btn-group uib-bs-flex widget uib_w_37 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+            <button class="btn widget uib_w_38 btn-lg btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="curti"><i class="glyphicon glyphicon-heart button-icon-top" data-position="top"></i>
+            </button>
+            <button class="btn widget uib_w_39 btn-lg btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnEncontrei">Eu encontrei!</button>
+          </div>
+          <div class="widget uib_w_10 tamImgs marginImgs" data-uib="media/img" data-ver="0">
+            <figure class="figure-align">
+              <img src="images/nina.jpg">
+
+              <figcaption data-position="bottom"></figcaption>
+            </figure>
+          </div>
+          <div class="tarea widget uib_w_11 d-margins marginText textoProcurar" data-uib="media/text" data-ver="0" name="uib_w_11">
+            <div class="widget-container left-receptacle"></div>
+            <div class="widget-container right-receptacle"></div>
+            <div class="text-container">
+              <p><small><strong>Atende por</strong>: Nina</small>
+              </p>
+
+              <p><small><strong>Perdido em</strong>: 25/11/2017</small>
+              </p>
+
+              <p><small><strong>Visto pela última vez em</strong>: </small>
+              </p>
+
+              <p><small>São Roque-SP no Bairro Mosteiro</small>
+              </p>
+            </div>
+          </div>
+          <div class="tarea widget uib_w_13 d-margins textoProcurar" data-uib="media/text" data-ver="0" name="uib_w_13">
+            <div class="widget-container left-receptacle"></div>
+            <div class="widget-container right-receptacle"></div>
+            <div class="text-container">
+              <p><small><strong>Raça</strong>: YorkShire</small>
+              </p>
+
+              <p><small><strong>Cor</strong>: Preto e Bege</small>
+              </p>
+
+              <p><small><strong>Nome p/ contato</strong>: Clerosvaldo</small>
+              </p>
+
+              <p><small><strong>Telefone p/ contato</strong>: (11) 956478493</small>
+              </p>
+            </div>
+          </div>
+          <div class="btn-group uib-bs-flex widget uib_w_37 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+            <button class="btn widget uib_w_38 btn-lg btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="curti"><i class="glyphicon glyphicon-heart button-icon-top" data-position="top"></i>
+            </button>
+            <button class="btn widget uib_w_39 btn-lg btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnEncontrei">Eu encontrei!</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="upage hidden" id="EncontreiPet">
+      <div class="upage-outer">
+        <div class="inner-element uib_w_65 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'squeeze', 'v':200, 'side':'left', 'dur':200}" id="navbar">
+          <div class="sidebar-content content-area vertical-col">
+
+            <button class="btn widget uib_w_66 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnHome">Home<i class="glyphicon glyphicon-home button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_67 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnCadastrar">Cadastrar Pet<i class="glyphicon glyphicon-plus button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_68 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnProcurar">Procurar Pet<i class="glyphicon glyphicon-search button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_69 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnComoFunciona">Como Funciona?<i class="glyphicon glyphicon-question-sign button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_70 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnContatenos">Contate-nos<i class="glyphicon glyphicon-bullhorn button-icon-right" data-position="right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="uib-header header-bg container-group inner-element uib_w_44" data-uib="layout/header" data-ver="0" id="headertitle">
+          <h2>Procurando Pet</h2>
+          <button class="btn widget uib_w_17 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="voltar"><i class="glyphicon glyphicon-chevron-left button-icon-left" data-position="left"></i>
+          </button>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"></div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_85_88">
+          <div class="tarea widget uib_w_45 d-margins" data-uib="media/text" data-ver="0" name="uib_w_45">
+            <div class="widget-container left-receptacle"></div>
+            <div class="widget-container right-receptacle"></div>
+            <div class="text-container">
+              <p><big>Você realmente encontrou? Se sim, preencha este pequeno formulário para entrar em contato com o dono.</big>
+              </p>
+            </div>
+          </div>
+          <div class="table-thing widget uib_w_46 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+            <label class="narrow-control label-top-left">Aonde ele estava?</label>
+            <input class="wide-control form-control default" type="text">
+          </div>
+          <div class="table-thing widget uib_w_47 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+            <label class="narrow-control label-top-left" for="telefone">Telefone p/ contato</label>
+            <input class="wide-control form-control default" type="tel" placeholder="DDD + número" id="telefone">
+          </div>
+          <div class="tarea widget uib_w_48 d-margins" data-uib="media/text" data-ver="0" name="uib_w_48">
+            <div class="widget-container left-receptacle"></div>
+            <div class="widget-container right-receptacle"></div>
+            <div class="text-container">
+              <p><strong>Anexar uma foto</strong>
+              </p>
+            </div>
+          </div>
+          <div class="widget uib_w_49 d-margins" data-uib="media/file_input" data-ver="0">
+            <input type="file">
+          </div>
+          <div class="btn-group uib-bs-flex widget uib_w_50 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+            <button class="btn widget uib_w_51 btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="limpar">Limpar</button>
+            <button class="btn widget uib_w_53 btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="enviar">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="upage hidden" id="CadastrarPet">
+      <div class="upage-outer">
+        <div class="inner-element uib_w_65 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'squeeze', 'v':200, 'side':'left', 'dur':200}" id="navbar">
+          <div class="sidebar-content content-area vertical-col">
+
+            <button class="btn widget uib_w_66 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnHome">Home<i class="glyphicon glyphicon-home button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_67 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnCadastrar">Cadastrar Pet<i class="glyphicon glyphicon-plus button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_68 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnProcurar">Procurar Pet<i class="glyphicon glyphicon-search button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_69 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnComoFunciona">Como Funciona?<i class="glyphicon glyphicon-question-sign button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_70 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnContatenos">Contate-nos<i class="glyphicon glyphicon-bullhorn button-icon-right" data-position="right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="uib-header header-bg container-group inner-element uib_w_24" data-uib="layout/header" data-ver="0" id="headertitle">
+          <h2>Procurando Pet</h2>
+          <button class="btn widget uib_w_17 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="voltar"><i class="glyphicon glyphicon-chevron-left button-icon-left" data-position="left"></i>
+          </button>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"></div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+
+        <div class="upage-content ac0 content-area vertical-col left" id="page_86_25">
+          <div class="tarea widget uib_w_25 d-margins" data-uib="media/text" data-ver="0" name="uib_w_25">
+            <div class="widget-container left-receptacle"></div>
+            <div class="widget-container right-receptacle"></div>
+            <div class="text-container">
+              <p><big>Perdeu seu pet? Preencha este formulário abaixo&nbsp;e nós vamos ajudar a encontrá-lo!&nbsp;Vamos apenas precisar de algumas informações suas e do pet.</big>
+              </p>
+            </div>
+          </div>
+          <div class="table-thing widget uib_w_26 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+            <label class="narrow-control label-top-left" for="nomePet">Atende por</label>
+            <input class="wide-control form-control default" type="text" placeholder="nome do pet" id="nomePet">
+          </div>
+          <div class="table-thing widget uib_w_27 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+            <label class="narrow-control label-top-left" for="perdidoem">Perdido em</label>
+            <input class="wide-control form-control default" type="date" placeholder="Placeholder" id="perdidoem">
+          </div>
+          <div class="table-thing widget uib_w_28 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+            <label class="narrow-control label-top-left" for="vistoultimavez">Visto pela última vez em</label>
+            <input class="wide-control form-control default" type="text" placeholder="bairro/cidade/ponto de refêrencia" id="vistoultimavez">
+          </div>
+          <div class="table-thing widget uib_w_29 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+            <label class="narrow-control label-top-left" for="raca">Raça</label>
+            <input class="wide-control form-control default" type="text" placeholder="Placeholder" id="raca">
+          </div>
+          <div class="table-thing widget uib_w_30 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+            <label class="narrow-control label-top-left" for="cor">Cor</label>
+            <input class="wide-control form-control default" type="text" placeholder="cor" id="cor">
+          </div>
+          <div class="table-thing widget uib_w_31 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+            <label class="narrow-control label-top-left" for="nomeContato">Nome p/ contato</label>
+            <input class="wide-control form-control default" type="text" placeholder="Digite seu nome" id="nomeContato">
+          </div>
+          <div class="table-thing widget uib_w_32 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+            <label class="narrow-control label-top-left" for="telefone">Telefone p/ contato</label>
+            <input class="wide-control form-control default" type="tel" placeholder="DDD + número" id="telefone">
+          </div>
+          <div class="btn-group uib-bs-flex widget uib_w_33 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+            <button class="btn widget uib_w_34 btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="limpar">Limpar</button>
+            <button class="btn widget uib_w_36 btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="enviar">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="upage hidden" id="Contatenos">
+      <div class="upage-outer">
+        <div class="inner-element uib_w_65 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'squeeze', 'v':200, 'side':'left', 'dur':200}" id="navbar">
+          <div class="sidebar-content content-area vertical-col">
+
+            <button class="btn widget uib_w_66 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnHome">Home<i class="glyphicon glyphicon-home button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_67 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnCadastrar">Cadastrar Pet<i class="glyphicon glyphicon-plus button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_68 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnProcurar">Procurar Pet<i class="glyphicon glyphicon-search button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_69 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnComoFunciona">Como Funciona?<i class="glyphicon glyphicon-question-sign button-icon-right" data-position="right"></i>
+            </button>
+            <button class="btn widget uib_w_70 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnContatenos">Contate-nos<i class="glyphicon glyphicon-bullhorn button-icon-right" data-position="right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="uib-header header-bg container-group inner-element uib_w_55" data-uib="layout/header" data-ver="0" id="headertitle">
+          <h2>Procurando Pet</h2>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left">
+            <button class="btn widget uib_w_17 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="voltar"><i class="glyphicon glyphicon-chevron-left button-icon-left" data-position="left"></i> 
+            </button>
+          </div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_43_83">
+          <div class="tarea widget uib_w_56 d-margins" data-uib="media/text" data-ver="0" name="uib_w_56">
+            <div class="widget-container left-receptacle"></div>
+            <div class="widget-container right-receptacle"></div>
+            <div class="text-container">
+              <p>Tem alguma crítica ou sugestão? Fale conosco! Gostaríamos muito de ouvir sua opinião.</p>
+            </div>
+          </div>
+          <div class="table-thing widget uib_w_57 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+            <label class="narrow-control label-inline">Nome</label>
+            <input class="wide-control form-control default" type="text" placeholder="Digite seu nome">
+          </div>
+          <div class="table-thing widget uib_w_58 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+            <label class="narrow-control label-inline">E-mail</label>
+            <input class="wide-control form-control default" type="text" placeholder="Digite seu e-mail">
+          </div>
+          <div class="table-thing widget uib_w_59 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+            <label class="narrow-control label-inline">Telefone</label>
+            <input class="wide-control form-control default" type="text" placeholder="DDD + número">
+          </div>
+          <div class="table-thing widget uib_w_60 d-margins" data-uib="twitter%20bootstrap/text_area" data-ver="1">
+            <label class="narrow-control label-top-left">Escreva algo para nós</label>
+            <textarea rows="7" class="wide-control form-control" wrap="soft" placeholder="No máximo 500 caracteres" maxlength="500"></textarea>
+          </div>
+          <div class="btn-group uib-bs-flex widget uib_w_61 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+            <button class="btn widget uib_w_62 btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="limpar" type="reset">Limpar</button>
+            <button class="btn widget uib_w_64 btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="enviar" type="submit">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+</html>
